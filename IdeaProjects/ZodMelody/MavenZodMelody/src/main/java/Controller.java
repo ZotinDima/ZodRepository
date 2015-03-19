@@ -7,19 +7,19 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import java.awt.*;
+import java.io.File;
 
 public class Controller {
 
     public Button btn1;
-    public Frame AP1;
 
     public void OnClickMethod(ActionEvent actionEvent) {
-        Parent root = FXMLLoader.load(getClass().getResource("F1.fxml"));
-        AP1.setTitle("Hello World");
-        AP1.setScene(new Scene(root, 500, 500));
-        AP1.show();
     }
 }
 
