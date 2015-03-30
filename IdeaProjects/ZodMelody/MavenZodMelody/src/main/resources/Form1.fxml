@@ -12,7 +12,7 @@
   <children>
     <Button fx:id="btnPlay" layoutX="158.0" layoutY="289.0" mnemonicParsing="false" onAction="#btnPlayMelody" text="слушать" />
     <Button fx:id="btnAnswer3" layoutX="143.0" layoutY="419.0" mnemonicParsing="false" onAction="#btnAnswer3Click" prefWidth="313.0" text="Hans Zimmer - The Buttle" />
-    <Button fx:id="btnAnswer2" layoutX="143.0" layoutY="383.0" mnemonicParsing="false" onAction="#btnAnswer2Click" prefWidth="313.0" text="Бетховен - лунная соната" />
+    <Button fx:id="btnAnswer2" layoutX="143.0" layoutY="383.0" mnemonicParsing="false" onAction="#btnAnswer2Click" prefWidth="313.0" text="AC-DC - Highway To Hell" />
     <Button fx:id="btnAnswer1" layoutX="143.0" layoutY="348.0" mnemonicParsing="false" onAction="#btnAnswer1Click" text="Bob Kaper – The Broadway Stage Orchestra" />
     <Label layoutX="199.0" layoutY="318.0" text="Выберете правильный ответ:" />
     <ImageView fitHeight="238.75004166666562" fitWidth="573.0000999999975" layoutX="13.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">

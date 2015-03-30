@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="form1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="612.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Controller">
+  <children>
+    <Button fx:id="btnClose" layoutX="551.0" layoutY="14.0" minWidth="27.0" mnemonicParsing="false" onAction="#OnClickMethodClose" prefWidth="35.0" text="X" textAlignment="RIGHT">
+      <font>
+        <Font name="System Bold" size="12.0" />
+      </font>
+    </Button>
+    <Button fx:id="btnOpenNextForm" layoutX="184.0" layoutY="155.0" mnemonicParsing="false" onAction="#OnClickMethodOpenNextForm" prefHeight="47.0" prefWidth="244.0" text="Играть дальше" />
+    <Button fx:id="btnSavePoints" layoutX="184.0" layoutY="233.0" mnemonicParsing="false" onAction="#OnClickMethodSavePoints" prefHeight="47.0" prefWidth="244.0" text="Сохранить очки" />
+    <Label layoutX="184.0" layoutY="105.0" text="Ваши очки:" />
+    <Label fx:id="LabelPlayerScore" layoutX="271.0" layoutY="105.0" text="Label" />
+  </children>
+</AnchorPane>
