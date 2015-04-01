@@ -1,25 +1,47 @@
 
-import javafx.event.*;
-import javafx.event.Event;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
-
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import java.awt.*;
-import java.io.File;
 
 public class Controller {
 
-    private Main main=new Main();
-    Music zodMelody=new Music("/Sounds/AC-DC - Highway To Hell (Supernatural OST).mp3");
+    public Button btnAnswer1;
+    public Button btnAnswer2;
+    public Button btnAnswer3;
+    public Label LabelPlayerScore;
+
+    private Main main;
+    private static int Score;
+    private static String MelodyName;
+    private static Music zodMelody;
+
+    public Controller() {
+        main = new Main();
+        Score=0;
+    }
+
+    public static int getScore() {
+        return Score;
+    }
+
+    public static void setScore(int score) {
+        Score = score;
+    }
+
+    public static void setMelodyPath(String melodyPath) {
+        zodMelody=new Music(melodyPath);
+    }
+
+    public static void setMelodyName(String melodyName) {
+        MelodyName = melodyName;
+    }
+
+    public static String getMelodyName() {
+        return MelodyName;
+    }
 
     @FXML
     public static Stage stageControl;
@@ -47,23 +69,47 @@ public class Controller {
     }
 
     public void btnAnswer3Click(ActionEvent actionEvent) {
-
+        equalsMelodys(btnAnswer3);
     }
 
     public void btnAnswer2Click(ActionEvent actionEvent) {
-
+        equalsMelodys(btnAnswer2);
     }
 
     public void btnAnswer1Click(ActionEvent actionEvent) {
+        equalsMelodys(btnAnswer1);
+    }
 
+    @FXML
+    private void equalsMelodys(Button btn){
+        zodMelody.stop();
+        if(btn.getText().equals(getMelodyName())){
+            Score+=1;
+        }
+        stageControl.hide();
+        main.showNextForm();
+        //LabelPlayerScore.setText(String.valueOf(Score));
     }
 
     @FXML
     public void btnPlayMelody(ActionEvent actionEvent) {
-        zodMelody.stop();
         zodMelody.play();
     }
 
+    @FXML
+    public void OnClickMethodOpenNextForm(ActionEvent actionEvent) {
+
+    }
+
+    @FXML
+    public void OnClickMethodSavePoints(ActionEvent actionEvent) {
+
+    }
+
+    @FXML
+    public void OnClickMethodPause(ActionEvent actionEvent) {
+        zodMelody.pause();
+    }
 }
 
 
