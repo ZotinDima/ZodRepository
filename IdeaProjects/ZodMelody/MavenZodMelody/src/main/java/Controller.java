@@ -82,17 +82,17 @@ public class Controller {
 
     @FXML
     private void equalsMelodys(Button btn){
+        zodMelody.stop();
         if(btn.getText().equals(getMelodyName())){
             Score+=1;
         }
         stageControl.hide();
         main.showNextForm();
-        LabelPlayerScore.setText(String.valueOf(Score));
+        //LabelPlayerScore.setText(String.valueOf(Score));
     }
 
     @FXML
     public void btnPlayMelody(ActionEvent actionEvent) {
-        zodMelody.stop();
         zodMelody.play();
     }
 
@@ -104,6 +104,11 @@ public class Controller {
     @FXML
     public void OnClickMethodSavePoints(ActionEvent actionEvent) {
 
+    }
+
+    @FXML
+    public void OnClickMethodPause(ActionEvent actionEvent) {
+        zodMelody.pause();
     }
 }
 

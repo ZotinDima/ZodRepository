@@ -21,7 +21,7 @@
       </image>
     </ImageView>
     <Button fx:id="btnStop" layoutX="259.0" layoutY="289.0" mnemonicParsing="false" onAction="#btnStopMelody" prefWidth="81.9998779296875" text="Стоп" />
-    <Button fx:id="btnPause" layoutX="356.0" layoutY="289.0" mnemonicParsing="false" prefWidth="82.0" text="пауза" />
+    <Button fx:id="btnPause" layoutX="356.0" layoutY="289.0" mnemonicParsing="false" onAction="#OnClickMethodPause" prefWidth="82.0" text="пауза" />
     <Button fx:id="btnClose" layoutX="551.0" layoutY="14.0" minWidth="27.0" mnemonicParsing="false" onAction="#OnClickMethodClose" prefWidth="35.0" text="X" textAlignment="RIGHT">
       <font>
         <Font name="System Bold" size="12.0" />
