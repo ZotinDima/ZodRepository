@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="form1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="612.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Controller">
+  <children>
+    <Button fx:id="btnPlay" layoutX="158.0" layoutY="289.0" mnemonicParsing="false" onAction="#btnPlayMelody" text="слушать" />
+    <Button fx:id="btnAnswer3" layoutX="143.0" layoutY="419.0" mnemonicParsing="false" onAction="#btnAnswer3Click" prefWidth="313.0" text="短發" />
+    <Button fx:id="btnAnswer2" layoutX="143.0" layoutY="383.0" mnemonicParsing="false" onAction="#btnAnswer2Click" prefWidth="313.0" text="成龍" />
+    <Button fx:id="btnAnswer1" layoutX="143.0" layoutY="348.0" mnemonicParsing="false" onAction="#btnAnswer1Click" prefWidth="313.0" text="超自然" />
+    <Label layoutX="199.0" layoutY="318.0" text="Выберете правильный ответ:" />
+    <ImageView fitHeight="238.75004166666562" fitWidth="573.0000999999975" layoutX="13.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@Images/zodFormGolovin.jpg" />
+      </image>
+    </ImageView>
+    <Button fx:id="btnStop" layoutX="259.0" layoutY="289.0" mnemonicParsing="false" onAction="#btnStopMelody" prefWidth="81.9998779296875" text="Стоп" />
+    <Button fx:id="btnPause" layoutX="356.0" layoutY="289.0" mnemonicParsing="false" onAction="#OnClickMethodPause" prefWidth="82.0" text="пауза" />
+    <Button fx:id="btnClose" layoutX="551.0" layoutY="14.0" minWidth="27.0" mnemonicParsing="false" onAction="#OnClickMethodClose" prefWidth="35.0" text="X" textAlignment="RIGHT">
+      <font>
+        <Font name="System Bold" size="12.0" />
+      </font>
+    </Button>
+  </children>
+</AnchorPane>
