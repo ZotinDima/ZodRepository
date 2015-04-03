@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class Controller {
-    int muz = 0;
+    private static int muz = 0;
     public Button btnAnswer1;
     public Button btnAnswer2;
     public Button btnAnswer3;
