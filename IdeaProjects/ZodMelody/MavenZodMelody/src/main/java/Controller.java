@@ -1,13 +1,12 @@
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class Controller {
-
+    private static int muz = 0;
     public Button btnAnswer1;
     public Button btnAnswer2;
     public Button btnAnswer3;
@@ -20,7 +19,8 @@ public class Controller {
 
     public Controller() {
         main = new Main();
-        Score=0;
+        Score = 0;
+
     }
 
     public static int getScore() {
@@ -32,7 +32,7 @@ public class Controller {
     }
 
     public static void setMelodyPath(String melodyPath) {
-        zodMelody=new Music(melodyPath);
+        zodMelody = new Music(melodyPath);
     }
 
     public static void setMelodyName(String melodyName) {
@@ -51,6 +51,7 @@ public class Controller {
         stageControl.hide();
         main.showForm1();
     }
+
 
     @FXML
     public void OnClickMethodCloseMainForm(ActionEvent actionEvent) {
@@ -81,10 +82,10 @@ public class Controller {
     }
 
     @FXML
-    private void equalsMelodys(Button btn){
+    private void equalsMelodys(Button btn) {
         zodMelody.stop();
-        if(btn.getText().equals(getMelodyName())){
-            Score+=1;
+        if (btn.getText().equals(getMelodyName())) {
+            Score += 1;
         }
         stageControl.hide();
         main.showNextForm();
@@ -99,8 +100,21 @@ public class Controller {
     @FXML
     public void OnClickMethodOpenNextForm(ActionEvent actionEvent) {
 
-    }
+        stageControl.hide();
+        if (muz < 4) {
+            if (muz == 0) {
+                main.showForm2();
 
+            } else if (muz == 1) {
+                main.showForm3();
+            } else if (muz == 2) {
+                main.showForm4();
+            } else if (muz == 3) {
+                main.showForm5();
+            }
+            muz++;
+        }
+    }
     @FXML
     public void OnClickMethodSavePoints(ActionEvent actionEvent) {
 
