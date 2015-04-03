@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class Controller {
-    int muz = 0;
+    private static int muz = 0;
     public Button btnAnswer1;
     public Button btnAnswer2;
     public Button btnAnswer3;
@@ -103,7 +103,6 @@ public class Controller {
         stageControl.hide();
         if (muz < 4) {
             if (muz == 0) {
-                muz++;
                 main.showForm2();
 
             } else if (muz == 1) {
@@ -113,7 +112,6 @@ public class Controller {
             } else if (muz == 3) {
                 main.showForm5();
             }
-
             muz++;
         }
     }
