@@ -103,7 +103,7 @@ public class Controller {
         stageControl.hide();
         if (muz < 4) {
             if (muz == 0) {
-                muz++;
+               
                 main.showForm2();
 
             } else if (muz == 1) {
